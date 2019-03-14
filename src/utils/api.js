@@ -13,7 +13,7 @@ export async function getPopular() {
 }
 
 export async function getMovieInfoForId(movieId) {
-  const endpoint = `https://movie-search-restify.herokuapp.com/movies/${movieId}`;
+  const endpoint = `https://movie-search-restify.herokuapp.com/movie/${movieId}`;
   //const endpoint = `http://localhost:8080/movie/${movieId}`;
   const results = await fetch(endpoint).then(data => data.json());
   return results;
