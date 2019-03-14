@@ -1,11 +1,15 @@
 body {
-  margin: 0;
-  padding: 0;
+  padding-top: 30;
+  margin: 20;
+  padding: 20;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 75%;
+  display: inline;
+  justify-content: center;
 }
 
 code {
