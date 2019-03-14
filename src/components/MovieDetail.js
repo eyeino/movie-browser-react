@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { getMovieInfoForId } from '../utils/api';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 // FROM movie-search-backend:
 //
@@ -41,12 +46,23 @@ class MovieDetail extends Component {
   render() {
     const movie = this.state.movie;
     return (
-      <Container>
-        <img src={movie.posterUrl} alt=''></img>
-        <h3>{movie.title}</h3>
-        <p>Release Date: {movie.releaseDate}</p>
-        <p>Rating: {movie.rating}</p>
-        <p>Summary: {movie.summary}</p>
+      <Container style={{ margin: 40 }}>
+        <Row>
+          <Link to='/'>
+            <Button style={{ margin: 20 }} variant='danger'>Back</Button>
+          </Link>
+        </Row>
+        <Row>
+          <Col>
+            <Image src={movie.posterUrl} fluid />
+          </Col>
+          <Col>
+            <h3>{movie.title}</h3>
+            <p>Release Date: {movie.releaseDate}</p>
+            <p>Rating: {movie.rating}</p>
+            <p>Summary: {movie.summary}</p>
+          </Col>
+        </Row>
       </Container>
     )
   }

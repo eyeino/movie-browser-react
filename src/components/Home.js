@@ -52,7 +52,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Container>
+        <Container style={{ margin: 20 }}>
         <h2>Search Movies</h2>
         <Form>
           <Form.Row>
